@@ -8,11 +8,6 @@ You can check the code by running the command below.
 ```
 python main_xxx.py
 ```
-You can change the size and the characteristics of the problems by changing the certain rows in main_xxx.py files.
-```python:main_xxx.py
-#change
-```
-
 
 
 ## Finding extreme solutions
@@ -39,15 +34,14 @@ There are some python files that define other functions that is needed to run th
 
 ```
 └─other_functions
-    |  
+    |  basic_functions.py
+    |  graph_generations.py
 ```
 
 ## References
 Andersen, K. A., J$\ddot{\text{o}}$rnsten, K. and Lind, M.,
 "On bicriterion minimal spanning trees: An approximation,''
 *Computers \& Operations Research*, **23.12**, 1996, pp.1171-1182.0.
-
-
 
 Hamacher, H. W. and Ruhe, G.,
 "On spanning tree problems with multiple objectives,''

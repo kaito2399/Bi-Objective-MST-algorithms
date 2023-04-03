@@ -11,12 +11,12 @@ def grid_graph_gen(n):
     if node == n-1:
       continue
     elif node%root == root - 1:
-      G.add_edge(node,node+root, c = np.random.randint(0,100), p = np.random.randint(0,100))
+      G.add_edge(node,node+root, c0 = np.random.randint(0,100), c1 = np.random.randint(0,100))
     elif node // root == root - 1:
-      G.add_edge(node, node+1, c = np.random.randint(0,100), p = np.random.randint(0,100))
+      G.add_edge(node, node+1, c0 = np.random.randint(0,100), c1 = np.random.randint(0,100))
     else:
-      G.add_edge(node,node+1,c = np.random.randint(0,100), p = np.random.randint(0,100))
-      G.add_edge(node, node+root, c = np.random.randint(0,100), p = np.random.randint(0,100))
+      G.add_edge(node,node+1,c0 = np.random.randint(0,100), c1 = np.random.randint(0,100))
+      G.add_edge(node, node+root, c0 = np.random.randint(0,100), c1 = np.random.randint(0,100))
 
   return G
 
@@ -28,8 +28,8 @@ def random_graph_gen(n,density):
     G.add_nodes_from(range(n))
     for i,j in itertools.combinations(range(n),2):
       if np.random.random() < density:
-        G.add_edge(i,j,c=np.random.randint(0,100),p=np.random.randint(0,100))
+        G.add_edge(i,j, c0=np.random.randint(0,100), c1=np.random.randint(0,100))
     if nx.is_connected(G):
       break
-  
+
   return G
